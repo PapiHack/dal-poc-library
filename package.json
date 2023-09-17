@@ -1,0 +1,23 @@
+{
+  "name": "dal-poc",
+  "version": "1.0.0",
+  "description": "Just A PoC Library of a basic data access layer",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PapiHack",
+  "license": "ISC",
+  "dependencies": {
+    "class-validator": "^0.14.0",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "typescript": "^5.2.2"
+  }
+}
