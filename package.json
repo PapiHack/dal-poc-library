@@ -1,5 +1,5 @@
 {
-  "name": "dal-poc",
+  "name": "@papihack/dal-poc-library",
   "version": "1.0.0",
   "description": "Just A PoC Library of a basic data access layer",
   "main": "dist/index.js",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PapiHack/dal-poc-library.git"
+    "url": "https://github.com/PapiHack/dal-poc-library.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@papihack"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "PapiHack",
   "license": "ISC",
