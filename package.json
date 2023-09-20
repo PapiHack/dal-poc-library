@@ -2,10 +2,10 @@
   "name": "@papihack/dal-poc-library",
   "version": "1.0.0",
   "description": "Just A PoC Library of a basic data access layer",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "files": [
-    "/dist"
+    "/dist",
+    "src"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
