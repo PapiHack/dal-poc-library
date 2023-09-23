@@ -1,20 +1,30 @@
-import { Post } from "./post.entity";
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from "typeorm";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
+import { Document } from "mongoose";
 
-@Entity()
-export class Author {
-  @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column()
+@Schema({
+  timestamps: true,
+  toJSON: {
+    virtuals: true,
+  },
+  toObject: {
+    virtuals: true,
+  },
+})
+export class Author extends Document {
+  @Prop()
   name: string;
 
-  @Column()
+  @Prop()
   username: string;
 
-  @Column()
+  @Prop()
   email: string;
-
-  @OneToMany(() => Post, (post) => post.author)
-  posts: Array<Post>;
 }
+
+export const AuthorSchema = SchemaFactory.createForClass(Author);
+
+AuthorSchema.virtual("posts", {
+  localField: "_id",
+  foreignField: "author",
+  ref: "Post",
+});

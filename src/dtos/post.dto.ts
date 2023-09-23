@@ -1,4 +1,4 @@
-import { IsNumber, IsOptional, IsString } from "class-validator";
+import { IsOptional, IsString } from "class-validator";
 
 export class CreatePostDTO {
   @IsString()
@@ -7,8 +7,8 @@ export class CreatePostDTO {
   @IsString()
   content: string;
 
-  @IsNumber()
-  author: number;
+  @IsString()
+  author: string;
 }
 
 export class UpdatePostDTO {
@@ -20,7 +20,7 @@ export class UpdatePostDTO {
   @IsOptional()
   content: string;
 
-  @IsNumber()
+  @IsString()
   @IsOptional()
-  author: number;
+  author: string;
 }
